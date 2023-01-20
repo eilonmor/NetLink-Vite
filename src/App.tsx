@@ -2,7 +2,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Header} from './comps/Header'
-import {Main} from './comps/main'
+import {Main} from './comps/Main'
 import {Footer} from './comps/Footer'
 
 function App() {

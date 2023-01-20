@@ -1,3 +1,6 @@
+import { generateRandomUser } from "./MockeUsers";
+import AllRandomUsers from "./AllRandomUsers"
+import UserInfluencerCard from "./UserInfluncerCard";
 export  function InfluencerUsers(){
     return(
         <div id="userSection">
@@ -8,16 +11,10 @@ export  function InfluencerUsers(){
                 </div>
                 <p className="p-2 ">hey I'm 23 years old. I build this app in web dev corss</p>
             </div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
+            <UserInfluencerCard user={generateRandomUser()} />
+            <AllRandomUsers />
+
+            {/* <AllRandomUsers  func={GenerateRandomUser}/> */}
         </div>  
     )
 };
