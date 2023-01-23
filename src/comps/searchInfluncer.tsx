@@ -4,6 +4,8 @@ import AllRandomUsers  from "./AllRandomUsers";
 import  { users1, UserInfluncer, generateRandomUser  } from "./MockeUsers";
 // import { users } from "module";
 
+// catch the value from input search
+
 export function bringEventSearch(event: { target: { value: string; }; }):string|undefined{
     try{
         console.log(event.target.value)
@@ -15,42 +17,42 @@ export function bringEventSearch(event: { target: { value: string; }; }):string|
     
 }
 
-export  function FilteredUsersClient(e:{ target: { value: any; }; }){
-    const clientSearch = bringEventSearch(e)
-    const filteredUsers = users1.filter(user => 
-        user.name.toLowerCase().includes(clientSearch!.toLowerCase())
-    );
-    return(
-        <div>
-            {filteredUsers.map(user => (
-              <UserInfluencerCard key={user.name} user={user} />
-            ))}
-        </div>)
+// export  function FilteredUsersClient(e:{ target: { value: any; }; }){
+//     const clientSearch = bringEventSearch(e)
+//     const filteredUsers = users1.filter(user => 
+//         user.name.toLowerCase().includes(clientSearch!.toLowerCase())
+//     );
+//     return(
+//         <div>
+//             {filteredUsers.map(user => (
+//               <UserInfluencerCard key={user.name} user={user} />
+//             ))}
+//         </div>)
     //     <div>
     //     {filteredUsers.map(user => (
     //     <UserInfluencerCard key={user.name} user={user} />
     //   ))}
     //   </div>) 
-}
+// }
 
-function UserSearch(e:{ target: { value: any; }; },users: Array<UserInfluncer> ){
-    // const [searchTerm, setSearchTerm] = useState('');
-    // const handleSearch = (e) => {
-    //     setSearchTerm(e.target.value);
-    // }
-    const clientSearch = bringEventSearch(e)
-    const filteredUsers = users1.filter(user => 
-        user.name.toLowerCase().includes(clientSearch!.toLowerCase())
-    );
+// function UserSearch(e:{ target: { value: any; }; },users: Array<UserInfluncer> ){
+//     // const [searchTerm, setSearchTerm] = useState('');
+//     // const handleSearch = (e) => {
+//     //     setSearchTerm(e.target.value);
+//     // }
+//     const clientSearch = bringEventSearch(e)
+//     const filteredUsers = users1.filter(user => 
+//         user.name.toLowerCase().includes(clientSearch!.toLowerCase())
+//     );
 
-    return (
-        <div>
-            <input type="text" placeholder="Search for user" onChange={bringEventSearch} />
-            {filteredUsers.map(user => (
-              <UserInfluencerCard key={user.name} user={user} />
-            ))}
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             <input type="text" placeholder="Search for user" onChange={bringEventSearch} />
+//             {filteredUsers.map(user => (
+//               <UserInfluencerCard key={user.name} user={user} />
+//             ))}
+//         </div>
+//     );
+// }
 
-export default UserSearch;
+// export default UserSearch;

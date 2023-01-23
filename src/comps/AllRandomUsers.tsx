@@ -4,9 +4,11 @@ import UserInfluencerCard from './UserInfluncerCard';
 import  {users1, UserInfluncer, generateRandomUser  } from "./MockeUsers";
 import { useState, useEffect } from 'react';
 import { bringEventSearch } from './searchInfluncer';
-import {listofUsers, listofUMocksers, setListofUMocksers} from './UsersMockList'
+import {listofUsers} from './UsersMockList'
+// import SetInfluncerUsers from './SetInflincerUsers'
 
-
+// Comps responsibility - brings each correct user. 
+// All other comments are failed tries to make a re-render
 function AllRandomUsers(e: { target: { value: string; }; }){
     // const [users, setUsers] = useState<UserInfluncer[]>([]) 
     // useEffect(() => {
@@ -19,7 +21,7 @@ function AllRandomUsers(e: { target: { value: string; }; }){
     if (clientInput == "Eror404"){
         return (
             <>
-                {listofUMocksers.map(user => (
+                {listofUsers.map(user => (
                   <UserInfluencerCard key={user.name} user={user} />
                 ))}
             </>
@@ -29,13 +31,13 @@ function AllRandomUsers(e: { target: { value: string; }; }){
         const filteredUserssss = listofUsers.filter(user => user.name.toLowerCase().includes(clientInput!.toLowerCase())
         );
         console.log('hihi')
-        setListofUMocksers(filteredUserssss)
+        // setListofUMocksers(filteredUserssss)
         console.log(filteredUserssss)
         return(
             
             <>
             {console.log('I can Do it')}
-                {listofUMocksers.map(user => (
+                {filteredUserssss.map(user => (
                   <UserInfluencerCard key={user.name} user={user} />
                 ))}
             </>

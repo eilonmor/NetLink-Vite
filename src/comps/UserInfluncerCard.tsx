@@ -6,6 +6,8 @@ interface Props {
   user: UserInfluncer;
 }
 
+
+// map for show logo
 const SOCIAL_MEDIA_COMPONENTS:any = {
     facebook: <img className="userImg" src="./img/facebook.png"/>,
     instegram: <img className="userImg" src="./img/Instagram.jpg"/>,
@@ -20,7 +22,7 @@ const SOCIAL_MEDIA_COMPONENTS:any = {
     wechat: <img className="userImg" src="./img/facebook.png"/>,
     qq: <img className="userImg" src="./img/wechat.png"/>
   };
-
+// how eatch card looks like
 const UserInfluencerCard: React.FC<Props> = ({ user }) => {
     return (
         <div>

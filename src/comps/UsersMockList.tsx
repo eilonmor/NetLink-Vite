@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { UserInfluncer, generateRandomUser } from "./MockeUsers";
 
-export const listofUsers: UserInfluncer[] = [{
+// try to create a static list and do a re render
+
+export let listofUsers: UserInfluncer[] = [{
     name: 'Grant Waelchi',
     State: 'Arizona',
     Country: 'Iran',
@@ -280,4 +282,4 @@ export const listofUsers: UserInfluncer[] = [{
   }]
 
 
-  export let [listofUMocksers, setListofUMocksers] = useState(listofUsers)
+//   export  let [listofUMocksers, setListofUMocksers] = useState(listofUsers)

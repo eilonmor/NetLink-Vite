@@ -1,5 +1,6 @@
 // import * as faker from "@faker-js/faker"; // faker library to generate random data
 import { faker } from '@faker-js/faker';
+// Defines user type influencer
 
 
 interface SocialMedia{

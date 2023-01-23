@@ -1,3 +1,6 @@
+// comps responsibility Header
+
+
 export  function Header(){
     return(
         <header className="mb-auto">

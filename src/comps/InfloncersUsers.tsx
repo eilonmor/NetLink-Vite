@@ -1,8 +1,11 @@
 import { generateRandomUser, users1 } from "./MockeUsers";
 import AllRandomUsers from "./AllRandomUsers"
 import UserInfluencerCard from "./UserInfluncerCard";
-import UserSearch from "./searchInfluncer";
-import {FilteredUsersClient} from './searchInfluncer'
+// import UserSearch from "./searchInfluncer";
+// import {FilteredUsersClient} from './searchInfluncer'
+
+// comps responsibility - show all the correct users
+
 
 export  function InfluencerUsers(){
     return(

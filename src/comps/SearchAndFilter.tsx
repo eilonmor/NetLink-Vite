@@ -1,6 +1,8 @@
-import { bringEventSearch, FilteredUsersClient } from "./searchInfluncer";
+import { bringEventSearch,  } from "./searchInfluncer";
 import  AllRandomUsers  from "./AllRandomUsers";
 
+
+// comps responsibility Search and headline
 export function SearchAndFilter(){
     return(
         <div>
@@ -38,6 +40,8 @@ export function SearchAndFilter(){
         </div>
     )
 }
+
+// display or non-display the filter feature
 
 let disaplySwitch: number = 1;
 
