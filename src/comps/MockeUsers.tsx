@@ -57,7 +57,7 @@ export interface UserInfluncer{
 // create a random Influncer User
 export function generateRandomUser(): UserInfluncer {
   return {
-    name: faker.name.findName(),
+    name: faker.name.fullName(),
     State: faker.address.state(),
     Country: faker.address.country(),
     city: faker.address.city(),
@@ -97,10 +97,20 @@ export function generateRandomUser(): UserInfluncer {
   }
 }
 
+//crate a random list of users
 
-const users: UserInfluncer[] = []
-for (let i = 0; i < 250; i++) {
-  users.push(generateRandomUser())
+export const users1: UserInfluncer[] = []
+for (let i = 0; i < 10; i++) {
+  users1.push(generateRandomUser())
 }
 
-export default users
+
+// export default users1
+
+
+// useEffect(function listUsers(){
+//   const users: UserInfluncer[] = []
+//   for (let i = 0; i < 250; i++) {
+//     users.push(generateRandomUser())
+// }
+// }, []) 

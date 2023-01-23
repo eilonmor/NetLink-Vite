@@ -1,6 +1,9 @@
-import { generateRandomUser } from "./MockeUsers";
+import { generateRandomUser, users1 } from "./MockeUsers";
 import AllRandomUsers from "./AllRandomUsers"
 import UserInfluencerCard from "./UserInfluncerCard";
+import UserSearch from "./searchInfluncer";
+import {FilteredUsersClient} from './searchInfluncer'
+
 export  function InfluencerUsers(){
     return(
         <div id="userSection">
@@ -12,7 +15,9 @@ export  function InfluencerUsers(){
                 <p className="p-2 ">hey I'm 23 years old. I build this app in web dev corss</p>
             </div>
             <UserInfluencerCard user={generateRandomUser()} />
+            {/* <FilteredUsersClient /> */}
             <AllRandomUsers />
+            
 
             {/* <AllRandomUsers  func={GenerateRandomUser}/> */}
         </div>  

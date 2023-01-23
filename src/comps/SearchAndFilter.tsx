@@ -1,3 +1,6 @@
+import { bringEventSearch, FilteredUsersClient } from "./searchInfluncer";
+import  AllRandomUsers  from "./AllRandomUsers";
+
 export function SearchAndFilter(){
     return(
         <div>
@@ -5,7 +8,7 @@ export function SearchAndFilter(){
             <p className="p-2">Grow your brand with the help of our influencers and marketing experts.</p>
             <div>
                 <div className="input-group mb-3">
-                    <input type="text" className="form-control" placeholder="What service are you looking for?" />
+                    <input id="influncerSearchId" onChange={(e)=> AllRandomUsers(e)} type="text" className="form-control" placeholder="What service are you looking for?" />
                     <div className="input-group-append">
                         <button className="btn btn-outline-secondary" type="button"><img src="./img/search.png"/></button>
                         <button className="btn btn-outline-secondary" type="button" onClick={()=> OnOfFilter()}><img src="./img/filter.png"/></button>  

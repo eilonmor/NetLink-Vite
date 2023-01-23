@@ -26,7 +26,7 @@ const UserInfluencerCard: React.FC<Props> = ({ user }) => {
         <div>
             <h5>{user.name}</h5>
             <p>hey I'm {user.age} years old and I'm use this app.</p>
-            <p>I'M from  {user.city}, {user.State}</p>
+            <p>I'M from  {user.city}, {user.State} in {user.Country}.</p>
             <p>My social networks: </p>
             {Object.entries(user.socialMedia).map(([key, value]) => {
             if (!value)
