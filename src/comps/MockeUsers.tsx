@@ -104,14 +104,3 @@ export const users1: UserInfluncer[] = []
 for (let i = 0; i < 10; i++) {
   users1.push(generateRandomUser())
 }
-
-
-// export default users1
-
-
-// useEffect(function listUsers(){
-//   const users: UserInfluncer[] = []
-//   for (let i = 0; i < 250; i++) {
-//     users.push(generateRandomUser())
-// }
-// }, []) 

@@ -1,6 +1,5 @@
 // comps responsibility Header
 
-
 export  function Header(){
     return(
         <header className="mb-auto">
@@ -14,5 +13,5 @@ export  function Header(){
                     <a className="nav-link fw-bold py-1 px-2 m-2 text-white" href="./contact.html">Sign-out</a>
                 </nav>
             </div>
-        </header>)
+        </header>);
 };

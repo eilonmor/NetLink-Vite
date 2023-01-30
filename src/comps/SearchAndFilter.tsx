@@ -1,16 +1,13 @@
-import { bringEventSearch,  } from "./searchInfluncer";
-import  AllRandomUsers  from "./AllRandomUsers";
-
 
 // comps responsibility Search and headline
-export function SearchAndFilter(){
+export function SearchAndFilter(props:any){
     return(
         <div>
             <h3>Influencer Marketing</h3>
             <p className="p-2">Grow your brand with the help of our influencers and marketing experts.</p>
             <div>
                 <div className="input-group mb-3">
-                    <input id="influncerSearchId" onChange={(e)=> AllRandomUsers(e)} type="text" className="form-control" placeholder="What service are you looking for?" />
+                    <input id="influncerSearchId" onChange={(e)=> (props.onChange(e))} type="text" className="form-control" placeholder="What service are you looking for?" />
                     <div className="input-group-append">
                         <button className="btn btn-outline-secondary" type="button"><img src="./img/search.png"/></button>
                         <button className="btn btn-outline-secondary" type="button" onClick={()=> OnOfFilter()}><img src="./img/filter.png"/></button>  
