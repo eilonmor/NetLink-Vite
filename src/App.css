@@ -32,7 +32,7 @@
 #userSection > * {
   font: size 16px;
   border: 2px solid red;
-  /* height: 33vh; */
+  height: 42vh;
   border-radius: 3%;
 }
 @media only screen and (max-width: 1468px) {
@@ -174,3 +174,28 @@ main button #imgSerch {
  align-items: center;
  justify-content: center;
  color: white;}
+
+
+#page404{
+  text-align: center;
+  margin: 10vh;
+  padding: auto;
+}
+
+#page404 img {
+  width: 45%;
+  height: 35%;
+}
+
+.site{
+  text-align: center;
+  padding: 5px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+}
+.site > *{padding: 25px;}
+
+#text-white{
+  color: white;
+}

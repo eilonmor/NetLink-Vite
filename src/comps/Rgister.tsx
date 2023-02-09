@@ -13,7 +13,7 @@ export function Register(){
                         <h1 className="text-muted">Welcome to NetLink</h1>
                         <p className="lead">Marketing through real people to there community</p>
                         <p className="lead">
-                            <a  className="btn btn-lg btn-danger m-3 fw-bold border-black bg-clack">Register</a>
+                            <a  className="btn btn-lg btn-danger m-3 fw-bold border-black bg-clack"onClick={()=>{navigate('chose-user')}}>Register</a>
                             <a  className="btn btn-lg btn-danger fw-bold border-black bg-clack" onClick={()=>{navigate('sign-in')}}>Sign-in</a>
                         </p>
                     </main>

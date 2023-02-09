@@ -1,14 +1,15 @@
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import loadingimg from "../assets/netlinkSmallLogo.png";
+
 
 export function SignIn(){
     return(
-        <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
-         
+         <>
            <Header />
             <main className="form-signin m-auto p-3 text-center" style={{height: '40%', width: '30%'}}>
                 <form>
-                    <img src="./img/netlinkLogo.png" style={{borderRadius: '50%'}} className="mb-3"/>
+                    <img src={loadingimg} style={{borderRadius: '50%'}} className="mb-3"/>
                     <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
                     <div className="form-floating m-2">
                         <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
@@ -31,6 +32,6 @@ export function SignIn(){
                 </form>
             </main>
             <Footer />
-        </div>
+        </>
     )
 }

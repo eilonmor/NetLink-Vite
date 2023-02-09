@@ -1,14 +1,18 @@
 // comps responsibility Header
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+// import { redirect } from "react-router-dom";
+
 
 
 
 export  function Header(){
     const navigate = useNavigate();
     const CreatTab = ({tabname}:{tabname:string})=>{
+        console.log(tabname)
         return(
-            <button className="btn bg-transparent nav-link fw-bold py-0 px-2  text-white" onClick={() => navigate(tabname)}>{tabname.charAt(0).toUpperCase() + tabname.slice(1)}</button>
+            // <button className="btn bg-transparent nav-link fw-bold py-0 px-2  text-white"><Link to={tabname}>{tabname.charAt(0).toUpperCase() + tabname.slice(1)}</Link></button>
+            <button className="btn bg-transparent nav-link fw-bold py-0 px-2  text-white" onClick={() => navigate(`../${tabname}`, { replace: true})}>{tabname.charAt(0).toUpperCase() + tabname.slice(1)}</button>
         );
     };
     
