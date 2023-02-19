@@ -8,19 +8,19 @@ interface Props {
 
 
 // map for show logo
-const SOCIAL_MEDIA_COMPONENTS:any = {
-    facebook: <img className="userImg" src="./img/facebook.png"/>,
-    instegram: <img className="userImg" src="./img/Instagram.jpg"/>,
-    linkdin: <img className="userImg" src="./img/linkdin.png"/>,
-    Pinterest: <img className="userImg" src="./img/Pinterest.png"/>,
-    reddit: <img className="userImg" src="./img/reddit.png"/>,
-    snapchat: <img className="userImg" src="./img/snapchat.png"/>,
-    tiktok: <img className="userImg" src="./img/tiktok.png"/>,
-    twiter: <img className="userImg" src="./img/twiter.png"/>,
-    twich: <img className="userImg" src="./img/twich.jpg"/>,
-    youtube: <img className="userImg" src="./img/youtub.png"/>,
-    wechat: <img className="userImg" src="./img/facebook.png"/>,
-    qq: <img className="userImg" src="./img/wechat.png"/>
+export const SOCIAL_MEDIA_COMPONENTS:any = {
+    facebook: <img className="userImg" src="./image/facebook.png"/>,
+    instegram: <img className="userImg" src="./image/Instagram.jpg"/>,
+    linkdin: <img className="userImg" src="./image/linkdin.png"/>,
+    Pinterest: <img className="userImg" src="./image/Pinterest.png"/>,
+    reddit: <img className="userImg" src="./image/reddit.png"/>,
+    snapchat: <img className="userImg" src="./image/snapchat.png"/>,
+    tiktok: <img className="userImg" src="./image/tiktok.png"/>,
+    twiter: <img className="userImg" src="./image/twiter.png"/>,
+    twich: <img className="userImg" src="./image/twich.jpg"/>,
+    youtube: <img className="userImg" src="./image/youtub.png"/>,
+    wechat: <img className="userImg" src="./image/facebook.png"/>,
+    qq: <img className="userImg" src="./image/wechat.png"/>
   };
 // how eatch card looks like
 const UserInfluencerCard: React.FC<Props> = ({ user }) => {

@@ -10,6 +10,8 @@ import { Notfound } from "./comps/NotFound";
 import { ChooseUserType } from './comps/ChoseUserType';
 import { SocialNetworkCh } from './comps/SocialsNetworkCh';
 import { SocialContinue } from './comps/SocialCountinue';
+import { DetailsRegister } from './comps/DetailsRegister';
+import { UserPicInfo } from './comps/UserPicInfo';
 
 
 
@@ -24,8 +26,14 @@ function App() {
       <Route path='register/sign-in' element={<SignIn />} />
       <Route path='*' element={<Notfound />} />
       <Route path='register/chose-user' element={<ChooseUserType />} />
+      <Route path='register/chose-user/details-register' element={<DetailsRegister />} />
+      <Route path='register/chose-user/details-register/pic-info' element={<UserPicInfo />} />
       <Route path='register/chose-user/social-network' element={<SocialNetworkCh />} />
       <Route path='register/chose-user/social-network/put-link' element={<SocialContinue />} />
+      <Route path='register/chose-user/social-network/put-link/details-register' element={<DetailsRegister />} />
+      <Route path='register/chose-user/social-network/put-link/details-register/pic-info' element={<UserPicInfo />} />
+
+
 
     </Routes>  
   );

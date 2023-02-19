@@ -194,8 +194,14 @@ main button #imgSerch {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
 }
-.site > *{padding: 25px;}
+.site > *{padding: 20px;}
+
 
 #text-white{
   color: white;
+}
+
+#imgSociCheckbox img{
+  width: 56px;
+  height: 56px;
 }
