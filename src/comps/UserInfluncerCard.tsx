@@ -25,6 +25,7 @@ export const SOCIAL_MEDIA_COMPONENTS:any = {
 // how eatch card looks like
 const UserInfluencerCard: React.FC<Props> = ({ user }) => {
     return (
+
         <div>
             <h5>{user.name}</h5>
             <p>hey I'm {user.age} years old and I'm use this app.</p>
@@ -40,3 +41,5 @@ const UserInfluencerCard: React.FC<Props> = ({ user }) => {
 };
 
 export default UserInfluencerCard;
+
+

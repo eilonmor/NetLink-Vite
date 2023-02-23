@@ -17,16 +17,16 @@ export function SearchAndFilter(props:any){
             <div id="disaplyFilters">
                 <div className="d-flex flex-row" >
                 {/* <!-- Search filter Influencer Details --> */}
-                    <div className="dropdown">
-                        <button className="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown button
-                        </button>
-                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
-                            <a className="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
+                <div className="dropdown">
+                    <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li><a className="dropdown-item" href="#">Action</a></li>
+                        <li><a className="dropdown-item" href="#">Another action</a></li>
+                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
 
                     <div className="form-switch m-2">
                         <input className="form-check-input m-1" type="checkbox" id="flexSwitchCheckChecked" checked />
