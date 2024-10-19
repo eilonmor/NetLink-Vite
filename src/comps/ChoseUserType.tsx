@@ -8,8 +8,8 @@ export function ChooseUserType() {
         <>
             <Header />
             <div className="site_grid">
-                <a  id="text-white" onClick={()=>{navigate('social-network')}}><h1>Inflowencer</h1></a>
-                <a  id="text-white" onClick={()=>{navigate('details-register')}}><h1>Own Of Buisnes</h1></a>
+                <a  id="text-white" onClick={()=>{navigate('social-network')}}><h1>Influencer</h1></a>
+                <a  id="text-white" onClick={()=>{navigate('details-register')}}><h1>Business owner</h1></a>
             </div>
             <Footer />
         </>

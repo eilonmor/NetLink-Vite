@@ -4,6 +4,7 @@ import eilonPG from '../../img/eilon.jpg'
 import instegram from '../assets/Instagram.jpg'
 import facebook from '../assets/facebook.png'
 import linkedin from '../assets/linkdin.png'
+import { InstagramEmbed, TikTokEmbed } from 'react-social-media-embed';
 
 export function ProfileUser2(){
     return(
@@ -38,6 +39,17 @@ export function ProfileUser2(){
                                 <p className="font-italic mb-0">Web Developer</p> 
                                 <p className="font-italic mb-0">Lives in Kiriat Shemona</p> 
                             </div> 
+                            <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+                                <div> 
+                                <h6 className="mb-0 py-3 ">Instegram profile</h6>
+                                <InstagramEmbed url="https://www.instagram.com/leomessi/" width={340} />
+                                </div>
+                                <div> 
+                                <h6 className="mb-0 py-3">Tiktok profile:</h6>
+                                <TikTokEmbed url="https://www.tiktok.com/@messimaniacos.10"width={340}/>
+                                </div>
+                            </div>
+
                         </div> 
                         <div className="py-4 px-4"> 
                             <div className="d-flex align-items-center justify-content-between mb-3"> 
