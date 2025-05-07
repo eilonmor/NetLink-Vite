@@ -14,6 +14,7 @@ import { DetailsRegister } from './comps/DetailsRegister';
 import { UserPicInfo } from './comps/UserPicInfo';
 import { ProfileUser } from './comps/ProfileUser';
 import { ProfileUser2 } from './comps/ProfileUser2';
+import RegisterFormInfluencer from './comps/RegistrationFormInfluncer';
 
 
 
@@ -33,7 +34,7 @@ function App() {
       <Route path='register/chose-user/details-register/pic-info' element={<UserPicInfo />} />
       <Route path='register/chose-user/social-network' element={<SocialNetworkCh />} />
       <Route path='register/chose-user/social-network/put-link' element={<SocialContinue />} />
-      <Route path='register/chose-user/social-network/put-link/details-register' element={<DetailsRegister />} />
+      <Route path='register/chose-user/social-network/put-link/details-register' element={<RegisterFormInfluencer />} />
       <Route path='register/chose-user/social-network/put-link/details-register/pic-info' element={<UserPicInfo />} />
 
 

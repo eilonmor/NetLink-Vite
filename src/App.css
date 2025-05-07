@@ -23,18 +23,13 @@
     margin: 20px;
   }
 }
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 500px) {
   #userSection {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-#userSection > * {
-  font: size 16px;
-  border: 2px solid red;
-  height: 42vh;
-  border-radius: 3%;
-}
+
 @media only screen and (max-width: 1468px) {
   #userSection > * {
     font-size: 14px;
@@ -86,6 +81,27 @@ main button #imgSerch {
 
 #headerFooterColor{
   background-color: rgb(226, 74, 96);
+  position: relative; /* Ensure the dropdown is positioned relative to this container */
+}
+@media (max-width: 600px) {
+  #headerFooterColor {
+      padding: 1rem;
+      flex-direction: row; /* Stack items vertically on small screens */
+      text-align: center;
+  }
+
+  .nav-masthead {
+      flex-direction: column; /* Stack tabs vertically */
+  }
+
+  .nav-masthead .btn {
+      margin-bottom: 0.5rem; /* Add spacing between buttons */
+      font-size: 1rem; /* Adjust font size for small screens */
+  }
+
+  h3 {
+      font-size: 1.5rem; /* Adjust title size */
+  }
 }
 
 
@@ -334,7 +350,64 @@ body {
   height: 45px;
 }
 
+/* Card container */
+.user-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
 
+/* User name */
+.user-card h5 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* User details */
+.user-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+  text-align: center;
+}
+
+/* Social networks section */
+.user-card .social-networks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Social network buttons */
+.user-card .social-networks button {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card .social-networks button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social media icons */
+.user-card .userImg {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
 
 /* Users digsin */
 

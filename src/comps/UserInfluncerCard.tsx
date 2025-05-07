@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { UserInfluncer } from './MockeUsers';
 
-
 interface Props {
   user: UserInfluncer;
 }
@@ -11,31 +10,37 @@ interface Props {
 export const SOCIAL_MEDIA_COMPONENTS:any = {
     facebook: <img className="userImg" src="./image/facebook.png"/>,
     instegram: <img className="userImg" src="./image/Instagram.jpg"/>,
-    linkdin: <img className="userImg" src="./image/linkdin.png"/>,
-    Pinterest: <img className="userImg" src="./image/Pinterest.png"/>,
+    linkedin: <img className="userImg" src="./image/linkedin.png"/>,
+    pinterest: <img className="userImg" src="./image/pinterest.png"/>,
     reddit: <img className="userImg" src="./image/reddit.png"/>,
     snapchat: <img className="userImg" src="./image/snapchat.png"/>,
     tiktok: <img className="userImg" src="./image/tiktok.png"/>,
     twiter: <img className="userImg" src="./image/twiter.png"/>,
-    twich: <img className="userImg" src="./image/twich.jpg"/>,
-    youtube: <img className="userImg" src="./image/youtub.png"/>,
+    twitch: <img className="userImg" src="./image/twitch.jpg"/>,
+    youtube: <img className="userImg" src="./image/youtube.png"/>,
     wechat: <img className="userImg" src="./image/facebook.png"/>,
     qq: <img className="userImg" src="./image/wechat.png"/>
   };
 // how eatch card looks like
 const UserInfluencerCard: React.FC<Props> = ({ user }) => {
     return (
-
-        <div>
+        <div className="user-card">
             <h5>{user.name}</h5>
-            <p>hey I'm {user.age} years old and I'm use this app.</p>
-            <p>I'M from  {user.city}, {user.State} in {user.Country}.</p>
-            <p>My social networks: </p>
-            {Object.entries(user.socialMedia).map(([key, value]) => {
-            if (!value)
-                return null;
-            return <button id='buttonMysSocialNetworks'> {SOCIAL_MEDIA_COMPONENTS[key]}
-            </button>})}
+            <p>Hey, I'm {user.age} years old and I use this app.</p>
+            <p>
+                I'm from {user.city}, {user.State}, {user.Country}.
+            </p>
+            <p>My social networks:</p>
+            <div className="social-networks">
+                {Object.entries(user.socialMedia).map(([key, value]) => {
+                    if (!value) return null;
+                    return (
+                        <button key={key} className="social-network-button">
+                            {SOCIAL_MEDIA_COMPONENTS[key]}
+                        </button>
+                    );
+                })}
+            </div>
         </div>
     );
 };

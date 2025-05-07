@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import eilonPG from '../../img/eilon.jpg'
 import instegram from '../assets/Instagram.jpg'
 import facebook from '../assets/facebook.png'
-import linkedin from '../assets/linkdin.png'
+import linkedin from '../assets/linkedin.png'
 import { InstagramEmbed, TikTokEmbed } from 'react-social-media-embed';
 
 export function ProfileUser2(){
