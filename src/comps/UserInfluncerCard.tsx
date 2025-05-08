@@ -25,7 +25,10 @@ export const SOCIAL_MEDIA_COMPONENTS:any = {
 const UserInfluencerCard: React.FC<Props> = ({ user }) => {
     return (
         <div className="user-card">
-            <h5>{user.name}</h5>
+            <div className="user-card-header">
+                <img className="userImgProfile" src={user.picture} alt={user.name} />
+                <h5>{user.name}</h5>
+            </div>    
             <p>Hey, I'm {user.age} years old and I use this app.</p>
             <p>
                 I'm from {user.city}, {user.State}, {user.Country}.

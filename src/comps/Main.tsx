@@ -6,17 +6,22 @@ import { UserInfluncer } from "./MockeUsers";
 export  function Main(){
     const [fullListOfUsers, setFullListOfUsers] = useState<UserInfluncer[]>([])
     let [usersInfluncerList, setUsersInfluncerList] = useState<UserInfluncer[]>([])
+    // fetch the data from the server
     useEffect(() => {
         const fetchData = async () => {
-            const port = 3002
-            const url = 'http://localhost:'
-            let endPoint = '/NetLink'
-            const data= await fetch(`${url+port+endPoint}`)
-            const responce =await data.json()
-            setUsersInfluncerList(responce)
-            setFullListOfUsers(responce)
-        }
-        fetchData()
+            try {
+                const port = 3002
+                const url = 'http://localhost:'
+                let endPoint = '/NetLink'
+                const data= await fetch(`${url+port+endPoint}`)
+                const responce =await data.json()
+                setUsersInfluncerList(responce)
+                setFullListOfUsers(responce)
+            } catch  (error){
+                console.error('Error fetching users:', error);
+            }
+        };
+        fetchData();
     }, []);
     const search = (event:any)=> {
         try{

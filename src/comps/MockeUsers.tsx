@@ -52,6 +52,7 @@ export interface UserInfluncer{
   socialMedia: SocialMedia;
   age: number;
   sector: Sector;
+  picture?: string;
 }
 
 

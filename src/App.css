@@ -361,13 +361,20 @@ body {
   background-color: #fff;
   font-family: Arial, sans-serif;
 }
+.user-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
 
 /* User name */
 .user-card h5 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
   color: #333;
   text-align: center;
+
 }
 
 /* User details */
@@ -407,6 +414,17 @@ body {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+
+.user-card .userImgProfile {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
 }
 
 /* Users digsin */
