@@ -6,13 +6,13 @@ import { faker } from '@faker-js/faker';
 interface SocialMedia{
   instegram: boolean;
   facebook: boolean;
-  linkdin: boolean;
-  Pinterest: boolean;
+  linkedin: boolean;
+  pinterest: boolean;
   reddit: boolean;
   snapchat: boolean;
   tiktok: boolean;
   twiter: boolean;
-  twich: boolean;
+  twitch: boolean;
   youtube: boolean;
   wechat: boolean;
   qq: boolean;
@@ -52,6 +52,7 @@ export interface UserInfluncer{
   socialMedia: SocialMedia;
   age: number;
   sector: Sector;
+  picture?: string;
 }
 
 
@@ -65,13 +66,13 @@ export function generateRandomUser(): UserInfluncer {
     socialMedia: {
       instegram: Math.random() > 0.5,
       facebook: Math.random() > 0.5,
-      linkdin: Math.random() > 0.5,
-      Pinterest: Math.random() > 0.5,
+      linkedin: Math.random() > 0.5,
+      pinterest: Math.random() > 0.5,
       reddit: Math.random() > 0.5,
       snapchat: Math.random() > 0.5,
       tiktok: Math.random() > 0.5,
       twiter: Math.random() > 0.5,
-      twich: Math.random() > 0.5,
+      twitch: Math.random() > 0.5,
       youtube: Math.random() > 0.5,
       wechat: Math.random() > 0.5,
       qq: Math.random() > 0.5

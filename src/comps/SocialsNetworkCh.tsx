@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import instegram from '../assets/Instagram.jpg'
 import facebook from '../assets/facebook.png'
-import linkdin from '../assets/linkdin.png'
-import Pinterest from '../assets/Pinterest.png'
+import linkedin from '../assets/linkedin.png'
+import pinterest from '../assets/pinterest.png'
 import reddit from '../assets/reddit.png'
 import snapchat from '../assets/snapchat.png'
 import tiktok from '../assets/tiktok.png'
 import twiter from '../assets/twiter.png'
-import twich from '../assets/twich.jpg'
-import youtube from '../assets/youtub.png'
+import twitch from '../assets/twitch.jpg'
+import youtube from '../assets/youtube.png'
 import wechat from '../assets/wechat.png'
 import qq from '../assets/qq.png'
 import { useState } from "react";
@@ -39,8 +39,8 @@ function SocialNetworkSelect({imgS}: Props) {
 }
 
 export function SocialNetworkCh(){
-    const [socialNetworkList, setSocialNetworkList] = useState([facebook, instegram, linkdin, Pinterest, reddit, snapchat, tiktok, twiter, twich, youtube, wechat, qq]);
-
+    const [socialNetworkList, setSocialNetworkList] = useState([facebook, instegram, linkedin, pinterest, reddit, snapchat, tiktok, twiter, twitch, youtube, wechat, qq]);
+    const navigate = useNavigate()
     function buildInputsSocial(){
         listOfSocialInput = []
         const listOfSocialMedia = document.querySelectorAll('input')
@@ -51,6 +51,7 @@ export function SocialNetworkCh(){
             }
             localStorage.setItem('arrayOfSocialMedia', listOfSocialInput)
         });
+        listOfSocialInput.length ? navigate('put-link') : alert("You must choose at least 1 social media!");
     }
     return(
         <>
@@ -63,7 +64,7 @@ export function SocialNetworkCh(){
                 ))}
                 </fieldset>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                    <button className="btn btn-outline-primary" type="submit" onClick={() => {buildInputsSocial()}}><Link to={'put-link'}>Submit!</Link> </button>
+                    <button className="btn btn-outline-primary" type="submit" onClick={() => {buildInputsSocial()}}>Submit!</button>
                 </div>
             </div>
             <Footer />
