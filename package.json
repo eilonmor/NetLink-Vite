@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.8.0",
+    "react-select": "^5.10.1",
     "react-social-media-embed": "^2.5.13",
     "sort-by": "^1.2.0"
   },
