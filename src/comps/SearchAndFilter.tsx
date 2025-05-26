@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Filter from "./Filter";
 
 interface SearchAndFilterProps {
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -7,6 +8,15 @@ interface SearchAndFilterProps {
 export function SearchAndFilter(props:SearchAndFilterProps){
     // SearchAndFilter component to manage the search and filter functionality
     const [isFilterVisible, setIsFilterVisible] = useState(true); // State to manage filter visibility
+    const [selectedOption, setSelectedOption] = useState("all");
+    const [isLocalInfluencer, setIsLocalInfluencer] = useState(false);
+
+    const filterOptions = [
+        { label: "All", value: "all" },
+        { label: "Action", value: "action" },
+        { label: "Another action", value: "another" },
+        { label: "Something else", value: "something" },
+    ];
 
     const toggleFilterVisibility = () => {
         setIsFilterVisible((prev) => !prev); // Toggle the visibility state
@@ -24,28 +34,16 @@ export function SearchAndFilter(props:SearchAndFilterProps){
                     </div>
                 </div>
             </div>
-            {isFilterVisible && ( 
-            <div id="disaplyFilters">
-                <div className="d-flex flex-row" >
-                {/* <!-- Search filter Influencer Details --> */}
-                <div className="dropdown">
-                    <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
-                    </button>
-                    <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-
-                    <div className="form-switch m-2">
-                        <input className="form-check-input m-1" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label className="form-check-label p-2 d-inline" >Local Influencer </label>
-                    </div>
-                </div>
-            </div>
-        )}
+            {isFilterVisible && (
+                <Filter
+                    dropdownLabel="Filter by"
+                    options={filterOptions}
+                    selectedOption={selectedOption}
+                    onOptionChange={setSelectedOption}
+                    isLocalInfluencer={isLocalInfluencer}
+                    onLocalInfluencerToggle={setIsLocalInfluencer}
+                />
+            )}
         </>
     )
 }
