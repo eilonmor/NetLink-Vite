@@ -1,8 +1,18 @@
+import { useState } from "react";
 
+interface SearchAndFilterProps {
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 // comps responsibility Search and headline
-export function SearchAndFilter(props:any){
+export function SearchAndFilter(props:SearchAndFilterProps){
+    // SearchAndFilter component to manage the search and filter functionality
+    const [isFilterVisible, setIsFilterVisible] = useState(true); // State to manage filter visibility
+
+    const toggleFilterVisibility = () => {
+        setIsFilterVisible((prev) => !prev); // Toggle the visibility state
+    };
     return(
-        <div>
+        <>
             <h3>Influencer Marketing</h3>
             <p className="p-2">Grow your brand with the help of our influencers and marketing experts.</p>
             <div>
@@ -10,10 +20,11 @@ export function SearchAndFilter(props:any){
                     <input id="influncerSearchId" onChange={(e)=> (props.onChange(e))} type="text" className="form-control" placeholder="What service are you looking for?" />
                     <div className="input-group-append">
                         <button className="btn btn-outline-secondary" type="button"><img src="./img/search.png"/></button>
-                        <button className="btn btn-outline-secondary" type="button" onClick={()=> OnOfFilter()}><img src="./img/filter.png"/></button>  
+                        <button className="btn btn-outline-secondary" type="button" onClick={toggleFilterVisibility}><img src="./img/filter.png"/></button>  
                     </div>
                 </div>
             </div>
+            {isFilterVisible && ( 
             <div id="disaplyFilters">
                 <div className="d-flex flex-row" >
                 {/* <!-- Search filter Influencer Details --> */}
@@ -34,21 +45,7 @@ export function SearchAndFilter(props:any){
                     </div>
                 </div>
             </div>
-        </div>
+        )}
+        </>
     )
-}
-
-// display or non-display the filter feature
-
-let disaplySwitch: number = 1;
-
-function OnOfFilter(){
-    const filterr:HTMLElement = document.querySelector('#disaplyFilters')!
-    if (disaplySwitch == 0){
-        filterr.style.display = '';
-        disaplySwitch = 1
-    }else {
-        filterr.style.display = 'none';
-        disaplySwitch = 0
-    }
 }
