@@ -1,4 +1,3 @@
-
 #userSection {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -9,6 +8,9 @@
 @media only screen and (max-width: 1468px) {
   #userSection {
     grid-template-columns: repeat(4, 1fr);
+  }
+  #userSection > * {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 1028px) {
@@ -28,16 +30,14 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-
-@media only screen and (max-width: 1468px) {
-  #userSection > * {
-    font-size: 14px;
-  }
-}
 @media only screen and (max-width: 428px) {
   #userSection > * {
     height: 28vh;
+  }
+  header h3 {
+    margin: auto;
+    text-align: center;
+    color: black;
   }
 }
 
@@ -58,22 +58,6 @@
   justify-content: flex-start;
 }
 
-@media only screen and (max-width: 428px) {
-  header h3 {
-    margin: auto;
-    text-align: center;
-    color: black;
-  }
-}
-
-main {
-  overflow: auto;
-}
-main button #imgSerch {
-  width: 32px;
-  height: 32px;
-}
-
 #mainscrool {
   width: 100%;
   overflow: hidden;
@@ -81,29 +65,15 @@ main button #imgSerch {
 
 #headerFooterColor{
   background-color: rgb(226, 74, 96);
-  position: relative; /* Ensure the dropdown is positioned relative to this container */
+  position: relative;
 }
 @media (max-width: 600px) {
   #headerFooterColor {
       padding: 1rem;
-      flex-direction: row; /* Stack items vertically on small screens */
+      flex-direction: row;
       text-align: center;
   }
-
-  .nav-masthead {
-      flex-direction: column; /* Stack tabs vertically */
-  }
-
-  .nav-masthead .btn {
-      margin-bottom: 0.5rem; /* Add spacing between buttons */
-      font-size: 1rem; /* Adjust font size for small screens */
-  }
-
-  h3 {
-      font-size: 1.5rem; /* Adjust title size */
-  }
 }
-
 
 #buttonMysSocialNetworks{
   width: 15%;
@@ -118,7 +88,6 @@ main button #imgSerch {
   height: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 .bd-placeholder-img {
@@ -129,89 +98,9 @@ main button #imgSerch {
   user-select: none;
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+main {
+  overflow: auto;
 }
-
-.b-example-divider {
-  height: 3rem;
-  background-color: rgba(235, 149, 196, 0.1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-}
-
-.bi {
-  vertical-align: -.125em;
-  fill: currentColor;
-}
-
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.site_grid{
- width: 100%;
- height: 80vh;
- margin: 10px;
- display: flex;
- align-items: center;
- justify-content: center;
-}
-.site_grid > *{
- padding: 25px; 
- width: 450px; 
- height: 150px;
- background-color: rgb(226, 74, 96);; 
- margin: 10px;
- display: flex;
- align-items: center;
- justify-content: center;
- color: white;}
-
-
-#page404{
-  text-align: center;
-  margin: 10vh;
-  padding: auto;
-}
-
-#page404 img {
-  width: 45%;
-  height: 35%;
-}
-
-.site{
-  text-align: center;
-  padding: 5px;
-  margin: 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-}
-.site > *{padding: 20px;}
-
 
 #text-white{
   color: white;
@@ -222,8 +111,6 @@ main button #imgSerch {
   height: 56px;
 }
 
-
-/* ProfileUser (css write down ) */
 #profileBG {
   background-color: #000000
 }
@@ -336,7 +223,6 @@ p {
 
 body {
     background: #654ea3;
-    /* background: linear-gradient(to right, #e96443, #904e95); */
     min-height: 100vh;
     overflow-x:hidden;
 } 
@@ -369,7 +255,6 @@ body {
   margin-bottom: 5px;
 }
 
-/* User name */
 .user-card h5 {
   font-size: 1.5rem;
   color: #333;
@@ -377,7 +262,6 @@ body {
 
 }
 
-/* User details */
 .user-card p {
   font-size: 1rem;
   margin: 5px 0;
@@ -385,7 +269,6 @@ body {
   text-align: center;
 }
 
-/* Social networks section */
 .user-card .social-networks {
   display: flex;
   justify-content: center;
@@ -394,7 +277,6 @@ body {
   margin-top: 15px;
 }
 
-/* Social network buttons */
 .user-card .social-networks button {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -409,7 +291,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Social media icons */
 .user-card .userImg {
   width: 30px;
   height: 30px;
@@ -422,61 +303,4 @@ body {
   object-fit: contain;
   border-radius: 50%;
   border: 1px solid #ddd;
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; */
 }
-
-/* Users digsin */
-
-/* body{
-  background:#DCDCDC;
-  margin-top:20px;
-}
-.card-box {
-  padding: 20px;
-  border-radius: 3px;
-  margin-bottom: 30px;
-  background-color: #fff;
-}
-
-.social-links li a {
-  border-radius: 50%;
-  color: rgba(121, 121, 121, .8);
-  display: inline-block;
-  height: 30px;
-  line-height: 27px;
-  border: 2px solid rgba(121, 121, 121, .5);
-  text-align: center;
-  width: 30px
-}
-
-.social-links li a:hover {
-  color: #797979;
-  border: 2px solid #797979
-}
-.thumb-lg {
-  height: 88px;
-  width: 88px;
-}
-.img-thumbnail {
-  padding: .25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: .25rem;
-  max-width: 100%;
-  height: auto;
-}
-.text-pink {
-  color: #ff679b!important;
-}
-.btn-rounded {
-  border-radius: 2em;
-}
-.text-muted {
-  color: #98a6ad!important;
-}
-h4 {
-  line-height: 22px;
-  font-size: 18px;
-} */
