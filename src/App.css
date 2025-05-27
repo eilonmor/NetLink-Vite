@@ -1,3 +1,33 @@
+/* Loader styles */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  width: 100%;
+}
+.loader-spinner {
+  display: inline-block;
+  border: 4px solid #e0e0e0;
+  border-radius: 50%;
+  border-top: 4px solid #7460ee;
+  width: 48px;
+  height: 48px;
+  animation: loader-spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+@keyframes loader-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loader-label {
+  color: #7460ee;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 #userSection {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -314,8 +344,9 @@ body {
   padding-bottom: 0.5rem;
 }
 .header-bar {
-  max-width: 1200px;
-  min-height: 64px;
+  max-width: 900px;
+  min-height: 36px;
+  height: 40px;
   border-radius: 18px;
   margin: 0 auto;
   position: relative;
@@ -324,7 +355,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1.2rem;
   box-shadow: 0 2px 12px rgba(116,96,238,0.08);
 }
 .header-logo-btn {
@@ -333,35 +364,30 @@ body {
   background: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
   transition: filter 0.2s;
+  min-width: unset;
+  min-height: unset;
 }
 .header-logo-btn:hover {
   filter: brightness(1.1);
 }
 .header-logo-img {
-  height: 44px;
-  margin-right: 10px;
-  border-radius: 12px;
+  height: 28px;
+  margin-right: 8px;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(116,96,238,0.10);
 }
 .header-title {
   font-weight: 800;
-  font-size: 2rem;
-  letter-spacing: 1.5px;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
   color: #fff;
   text-shadow: 0 2px 8px rgba(116,96,238,0.10);
 }
 .header-menu-toggle {
-  font-size: 2.2rem;
-  border: none;
-  background: none;
-  margin-left: 1rem;
-  color: #fff;
-  transition: color 0.2s;
-}
-.header-menu-toggle:hover {
-  color: #e24a60;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
 }
 .header-nav {
   transition: all 0.3s;
@@ -386,20 +412,22 @@ body {
 }
 @media (max-width: 900px) {
   .header-bar {
+    min-height: 40px;
+    height: 44px;
     flex-direction: column;
-    gap: 0.5rem;
-    min-height: 90px;
-    padding: 0.5rem 0.5rem;
+    gap: 0.3rem;
+    padding: 0.3rem 0.3rem;
   }
   .header-title {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
   .header-bar {
+    min-height: 56px;
+    height: 64px;
     flex-direction: column;
     padding: 1rem 0.5rem;
-    min-height: 80px;
     gap: 0.5rem;
   }
   .header-title {
@@ -440,14 +468,14 @@ body {
 }
 @media (max-width: 480px) {
   .header-bar {
-    padding: 0.5rem 0.2rem;
+    padding: 0.2rem 0.1rem;
   }
   .header-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   .header-logo-img {
-    height: 32px;
-    margin-right: 6px;
-    border-radius: 8px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 6px;
   }
 }
