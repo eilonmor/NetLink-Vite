@@ -13,8 +13,8 @@ import { SocialContinue } from './comps/SocialCountinue';
 import { DetailsRegister } from './comps/DetailsRegister';
 import { UserPicInfo } from './comps/UserPicInfo';
 import { ProfileUser } from './comps/ProfileUser';
-import { ProfileUser2 } from './comps/ProfileUser2';
 import RegisterFormInfluencer from './comps/RegistrationFormInfluncer';
+import { UserProfilePage } from './comps/user-profile';
 
 
 
@@ -27,7 +27,7 @@ function App() {
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
       <Route path='register/sign-in' element={<SignIn />} />
-      <Route path='my profile' element={<ProfileUser2 />} />
+      <Route path='my profile' element={<UserProfilePage />} />
       <Route path='*' element={<Notfound />} />
       <Route path='register/chose-user' element={<ChooseUserType />} />
       <Route path='register/chose-user/details-register' element={<DetailsRegister />} />
